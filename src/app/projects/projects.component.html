@@ -1,6 +1,6 @@
 <h1>Projects</h1>
-<mat-grid-list class=container>
-
+<mat-grid-list class=container >
+<button #clicker></button>
     <mat-card class=project_card *ngFor="let link of projectLinks">
         <mat-card-header>
             <img mat-card-avatar class=project_avatar src={{link.avatarLink}} alt={{link.altAvatar}}>
@@ -13,8 +13,7 @@
         <mat-card-actions>
             <a *ngIf='link.hostLink' title="Visit webpage..." href={{link.hostLink}}>SCREENSHOOT</a>
             <a *ngIf='link.githubLink' title="Visit github" href={{link.githubLink}}>GITHUB</a>
-
         </mat-card-actions>
     </mat-card>
-
+    
 </mat-grid-list>

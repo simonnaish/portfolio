@@ -1,12 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
+import { ElementRef, ViewChild } from '@angular/core';
+
 import {MatCardModule } from '@angular/material/card';
+import { Container } from '@angular/compiler/src/i18n/i18n_ast';
 
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.scss']
 })
+
 export class ProjectsComponent implements OnInit {
+  @ViewChild('container') clicker: ElementRef;
+  
   title='projects'
   projectLinks: any[];
 
@@ -40,7 +46,11 @@ export class ProjectsComponent implements OnInit {
         githubLink: null
       }
     ]
-
+    setTimeout(() => {
+      this.clicker.nativeElement.click();
+      }, 1);
+    
+   
   }
 
   ngOnInit(): void {

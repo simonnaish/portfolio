@@ -36,6 +36,7 @@ export class AppComponent {
             detail:'Show my contact details...'
         }
     ];
+
   }
   
   
