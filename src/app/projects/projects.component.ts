@@ -7,6 +7,7 @@ import {MatCardModule } from '@angular/material/card';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
+  title='projects'
   projectLinks: any[];
 
   constructor() {
