@@ -1,1 +1,21 @@
-<p>projects works!</p>
+<h1>Projects</h1>
+<mat-grid-list class=container >
+
+    
+<mat-card class=project_card *ngFor="let link of projectLinks">
+    <mat-card-header>
+        <img mat-card-avatar class=project_avatar src={{link.avatarLink}} alt={{link.altAvatar}}>
+        <mat-card-title>{{link.title}}</mat-card-title>
+        <mat-card-subtitle>{{link.subtitle}}</mat-card-subtitle>   
+    </mat-card-header>
+        <mat-card-content>
+            {{link.description}}
+        </mat-card-content>
+        <mat-card-actions>
+            <a href={{link.hostLink}}>SCREENSHOOT</a>
+            <a href={{link.githubLink}}>GITHUB</a>
+
+        </mat-card-actions>
+    </mat-card>
+
+</mat-grid-list>

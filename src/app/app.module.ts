@@ -6,18 +6,31 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatTabsModule} from '@angular/material/tabs';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+
+
 import { AboutComponent } from './about/about.component';
 import { ProjectsComponent } from './projects/projects.component';
+import { CvComponent } from './cv/cv.component';
+import { ContactComponent } from './contact/contact.component';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutComponent,
-    ProjectsComponent
+    ProjectsComponent,
+    CvComponent,
+    ContactComponent,
   ],
   imports: [
     MatTabsModule,
+    MatCardModule,
+    MatBadgeModule,
+    MatGridListModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule

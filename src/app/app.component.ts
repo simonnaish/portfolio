@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import {Router} from '@angular/router';
-import { MatToolbarModule} from '@angular/material/toolbar'
 
 
 
@@ -18,19 +17,23 @@ export class AppComponent {
         {
             label: 'About',
             link: './',
-            index: 0
+            index: 0,
+            detail:'Show information about me...'
         }, {
             label: 'Projects',
             link: './projects',
-            index: 1
+            index: 1,
+            detail:'Show my recent projects...'
         }, {
             label: 'CV',
             link: './cv',
-            index: 2
+            index: 2,
+            detail:'Show my curriculum vitae...'
         }, {
             label: 'Contact',
             link: './contact',
-            index: 3
+            index: 3,
+            detail:'Show my contact details...'
         }
     ];
   }
