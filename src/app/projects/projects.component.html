@@ -12,8 +12,8 @@
             {{link.description}}
         </mat-card-content>
         <mat-card-actions>
-            <a href={{link.hostLink}}>SCREENSHOOT</a>
-            <a href={{link.githubLink}}>GITHUB</a>
+            <a *ngIf='link.hostLink' href={{link.hostLink}}>SCREENSHOOT</a>
+            <a *ngIf='link.githubLink' href={{link.githubLink}}>GITHUB</a>
 
         </mat-card-actions>
     </mat-card>
