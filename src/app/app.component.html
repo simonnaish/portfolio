@@ -1,26 +1,22 @@
-<body><header>
-  <div class=tabs>
-    <a routerLink='/' class='logo' title='Come back to home page...'>Szymon Dyda</a>
-    <nav mat-tab-nav-bar mat-align-tabs='end'>
-      <a mat-tab-link
-      *ngFor="let link of navLinks"
-      [routerLink]="link.link"
-      [title]="link.detail"
-      routerLinkActive #rla="routerLinkActive"
-      [routerLinkActiveOptions]="{exact:true}"
-      [active]="rla.isActive">
-      {{link.label}}
-      </a>
+<body>
+  <header>
+    <div class=tabs>
+      <a routerLink='/' class='logo' title='Come back to home page...'>Szymon Dyda</a>
+      <nav mat-tab-nav-bar mat-align-tabs='end'>
+        <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.link" [title]="link.detail" routerLinkActive
+          #rla="routerLinkActive" [routerLinkActiveOptions]="{exact:true}" [active]="rla.isActive">
+          {{link.label}}
+        </a>
       </nav>
-  </div>
+    </div>
 
- 
 
-</header>
+
+  </header>
   <router-outlet></router-outlet>
 
   <footer>
-    
+
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <p class="author">Szymon Dyda</p>
     <a class="fa fa-instagram" href="http://www.instagram.com/szymonkhal/"></a>

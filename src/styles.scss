@@ -1,28 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: max-content;}
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-header {padding-top: 2rem; padding-left: 1rem;padding-right: 1rem; padding-bottom: 0rem; height: 7rem;}
-* {color: black;}
+html,
+body {
+  height: max-content;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+header {
+  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 0rem;
+  height: 7rem;
+}
+
+//Watch out!
+* {
+  color: black;
+}
 
 // head tittles
-h1 {text-align: center; font-weight: bold;}
-
-
-@media only screen and (max-width: 992px){
-    *{
-        font-size: 10px;
-    }
+h1 {
+  text-align: center;
+  font-weight: bold;
 }
 
-@media only screen and (max-width: 600px){
-    *{
-        font-size: 7px;
-    }
-    
+@media only screen and (max-width: 992px) {
+  * {
+    font-size: 10px;
+  }
 }
-@media only screen and (max-width: 600px){
-    *{
-        font-size: 5px;
-    }
+
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 7px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  * {
+    font-size: 5px;
+  }
 }

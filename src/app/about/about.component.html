@@ -1,29 +1,3 @@
-<body>
-    <h1>About</h1>
-    <div class=intro>
-        <p>I am young, ambitious man with two passions. <br>One is programming, what is filling up most of my free time. 
-            This onekeep my brain "in shape" and give me something interesting between daily monotone.
-        <br>Another one is windsurfing/surfing, what help my body stay fit and healthy but also pay my bills at  this moment. </p>
-        <img src="./assets/img/me.JPG" alt="Profile photo">
-    </div>
-    <div class=story>
-        <p>Since school I knew that I want to work on creating new applications. I tried to develop my first small  scripts at this  time.<br>
-        After high school I started studying informatics on University of Technology in Wroclaw. As long as I was member, I enjoyed subjects, always
-    tried to make my projects working well and as easily written as was possible. <br>
-    I found my first job like a backend java developer on second year of studies. <br>
-</p>
-        <img src="./assets/img/sup.JPG" alt="SUP photo">
-    </div>
-    <div class=surf_story>
-        <p>Starting third year ofmy studies I have got unrepeatable opportunity to get better in another of my passions. <br>
-        I left abroad to work like windsurfing and surfing instructor as long as I was still young enough with strenght and health for extreme sports.</p>
-        <img src="./assets/img/flaka.JPG" alt="Flaka photo">
-    </div>
-    <div class=summary>
-        <p>Now came the time when I achieved most of what I could in this place and I am looking for opportunities to grow in oter direction.<br>
-        I like to analyze how things works as always enjoyed working on backed of my applications. Even if often I have a problem  with choosing right font or color for UI,
-    I thread it like another challenge and with small help of uncle google and aunt stackoverflow I am work on my projects until the end.</p>
-        <img src="./assets/img/screen_shoot.JPG" alt='screenshoot'>
-    </div>
-    
-</body>>
+<h1>About</h1>
+<app-about-piece *ngFor="let piece of pieces; even as isEven" [piece]=piece [className]="isEven ? 'left' : 'right'">
+</app-about-piece>

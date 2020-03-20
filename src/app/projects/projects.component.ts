@@ -17,6 +17,10 @@ export class ProjectsComponent implements OnInit {
   projectLinks: any[];
 
   constructor() {
+
+  }
+
+  ngOnInit(): void {
     this.projectLinks = [
       {
         avatarLink:'./assets/img/reneegli_logo.png',
@@ -51,9 +55,6 @@ export class ProjectsComponent implements OnInit {
       }, 1);
     
    
-  }
-
-  ngOnInit(): void {
   }
 
 }
