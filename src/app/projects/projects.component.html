@@ -1,8 +1,8 @@
 <h1>Projects</h1>
 <mat-grid-list class=container >
-    <mat-card class=project_card *ngFor="let link of projectLinks">
+    <mat-card class=project_card *ngFor="let link of projectLinks" [ngClass]=checkStyle(link) >
         <mat-card-header>
-            <img mat-card-avatar class=project_avatar src={{link.avatarLink}} alt={{link.altAvatar}}>
+            <img mat-card-avatar class=project_avatar [src]=link.avatarLink [alt]=link.altAvatar>
             <mat-card-title>{{link.title}}</mat-card-title>
             <mat-card-subtitle>{{link.subtitle}}</mat-card-subtitle>
         </mat-card-header>
@@ -10,8 +10,14 @@
             {{link.description}}
         </mat-card-content>
         <mat-card-actions>
-            <a *ngIf='link.hostLink' title="Visit webpage..." href={{link.hostLink}}>SCREENSHOOT</a>
-            <a *ngIf='link.githubLink' title="Visit github" href={{link.githubLink}}>GITHUB</a>
+            <a *ngIf='link.hostLink' title="Visit webpage..." [href]=link.hostLink>SCREENSHOOT</a>
+            <a *ngIf='link.githubLink; else: noGithub'  title="Visit github" [href]=link.githubLink>GITHUB </a>
+
+            <ng-template #noGithub>
+                <p>Sorry, project not ready to share.</p>
+            </ng-template>
+
+
         </mat-card-actions>
     </mat-card>
     

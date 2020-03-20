@@ -1,4 +1,6 @@
-export const ABOUT: any = [
+import { aboutPiece } from 'src/models/aboutPiece';
+
+export const ABOUT: aboutPiece[] = [
     {
         id: 0,
         title: 'Intro',
@@ -37,6 +39,43 @@ export const ABOUT: any = [
     }
 ]
 
-export function findTextById(textId: number) {
-    return ABOUT.find(about => about.id == textId);
-}
+// export function findTextById(textId: number) {
+//     return ABOUT.find(about => about.id == textId);
+// }
+import {project} from 'src/models/project'
+
+export const PROJECTS: project[] = [
+    {
+        id: 0,
+        category: 'full-stack',
+        avatarLink: './assets/img/reneegli_logo.png',
+        altAvatar: 'Rene Egli logo',
+        title: 'Material control system.',
+        subtitle: 'Python, HTML, CSS',
+        description: 'Web application taking care about organising material in company. Handling all operations only by serial number of equipment.',
+        hostLink: 'http://simonnaish3.pythonanywhere.com/',
+        githubLink: 'https://github.com/simonnaish/SailsCounterDjango/tree/master/SailsCounterDjango'
+    },
+    {
+        id: 1,
+        category: 'frontend',
+        avatarLink: './assets/img/flaka.JPG',
+        altAvatar: 'Flaka logo',
+        title: 'Portfolio.',
+        subtitle: 'Angular, HTML, CSS, TS',
+        description: 'Website contains short information about me, my projects, CV and contact details.',
+        hostLink: null,
+        githubLink: 'https://github.com/simonnaish/portfolio'
+    },
+    {
+        id: 2,
+        category: 'full-stack',
+        avatarLink: './assets/img/reneegli_logo.png',
+        altAvatar: 'Rene Egli logo',
+        title: 'Improved application for windsurfing center.',
+        subtitle: 'Angular, Django, DRF, Python, HTML, CSS, TS',
+        description: 'Web application taking care about organising material in company. Handling all operations only by serial number of equipment.',
+        hostLink: null,
+        githubLink: null
+    }
+]

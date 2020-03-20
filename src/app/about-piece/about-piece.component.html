@@ -1,6 +1,6 @@
-<body>
+<body *ngIf='piece'>
 
         <p>{{piece.text}} </p>
-        <img src={{piece.imageUrl}} alt={{piece.imageAlt}}>
+        <img [src]=piece.imageUrl [alt]=piece.imageAlt>
 
 </body>
