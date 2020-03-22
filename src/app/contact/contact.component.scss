@@ -1,7 +1,31 @@
+h1 {
+  font-size: 3rem;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  // flex-direction: row;
+  .contact_form {
+    order: 0;
+    // justify-self: self-start;
+  }
+  .send_form {
+    // justify-items: flex-end;
+
+    // justify-content: right;
+    // justify-self: flex-end;
+    order: 1;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .contact_form {
   font-size: 1.5rem;
   line-height: 3rem;
-  margin-left: 30rem;
+  margin-left: 4rem;
   text-align: left;
   .labels {
     font-weight: bolder;
@@ -12,6 +36,24 @@
   }
 }
 
-h1 {
-  font-size: 3rem;
+.send_form {
+  margin-right:4rem;
+  label {
+    margin: 2rem;
+    font-size: 1.5rem;
+    line-height: 3rem;
+    text-align: center;
+  }
+    .email_subject, .email_author{
+      min-height: 2rem;
+      text-align: center;
+    }
+    .email_content{
+    min-height: 10rem;
+    min-width: 10rem;
+  }
+  button {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
 }

@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
-import { ABOUT } from 'src/db-data';
+import {DatasService} from '../service/datas.service';
+
+import {aboutPiece} from 'src/models/aboutPiece';
+
+
 
 @Component({
   selector: 'app-about',
@@ -8,12 +13,13 @@ import { ABOUT } from 'src/db-data';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-  pieces = ABOUT;
+  pieces$: Observable<aboutPiece[]>
 
 
-  constructor() { }
+  constructor(private listOfAbout: DatasService) { }
 
   ngOnInit(): void {
+    this.pieces$=this.listOfAbout.loadAbout();
   }
 
 }

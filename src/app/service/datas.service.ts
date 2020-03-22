@@ -16,16 +16,23 @@ export class DatasService {
   constructor(private http: HttpClient) {
 
   }
-  // projectsParams = new HttpParams().set("columns", "project");
-  localUrl = 'assets/datas.json';
+
+  localUrl = 'assets/datas/';
+
+  //GET from projects.component
   loadProjects(): Observable<project[]> {
 
-    return this.http.get<project[]>(this.localUrl);//, {projectsParams});
+    return this.http.get<project[]>(this.localUrl + 'projectData.json');
+
+  }
+  //GET from about.component
+  loadAbout(): Observable<aboutPiece[]> {
+    return this.http.get<aboutPiece[]>(this.localUrl + 'aboutData.json');
+  }
+
+
+  //POST from Contact.component.
+  sendEmail(content:string){
     
   }
-
-  loadAbout(): Observable<aboutPiece[]> {
-    return this.http.get<aboutPiece[]>(this.localUrl);
-  }
-
 }
