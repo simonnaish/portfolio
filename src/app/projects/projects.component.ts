@@ -1,11 +1,16 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ElementRef, ViewChild } from '@angular/core';
 
-import {MatCardModule } from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { Container } from '@angular/compiler/src/i18n/i18n_ast';
+import {MatGridList} from '@angular/material/grid-list';
 
-import {PROJECTS} from 'src/db-data';
-import {project} from 'src/models/project';
+
+import { PROJECTS } from 'src/db-data';
+import { project } from 'src/models/project';
+import { Observable } from 'rxjs';
+import { DatasService } from '../service/datas.service';
+
 
 @Component({
   selector: 'app-projects',
@@ -14,26 +19,28 @@ import {project} from 'src/models/project';
 })
 
 export class ProjectsComponent implements OnInit {
-  @ViewChild('container') clicker: ElementRef;
-  
-  title='projects'
-  projectLinks=PROJECTS;
+  @ViewChild('container', {static: false}) clicker: ElementRef;
 
-  constructor() {
+  title = 'projects'
+  // projectLinks = PROJECTS;
 
+  projects$ : Observable<project[]>;
+
+  constructor(private listOfProjects:DatasService) {
+    
   }
 
-  checkStyle(link:project){
+  checkStyle(link: project) {
     return link.category;
   }
 
+  
   ngOnInit(): void {
-    
-    setTimeout(() => {
-      this.clicker.nativeElement.click();
-      }, 1);
-    
-   
+    this.projects$=this.listOfProjects.loadProjects();
+
+    //testing
+    this.projects$.forEach(t=>console.log(t));
   }
+
 
 }

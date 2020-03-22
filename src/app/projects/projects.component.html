@@ -1,10 +1,13 @@
 <h1>Projects</h1>
-<mat-grid-list class=container >
-    <mat-card class=project_card *ngFor="let link of projectLinks" [ngClass]=checkStyle(link) >
+
+<mat-grid-list class=container cols='3' *ngIf='projects$ | async as projects'>
+    <mat-card class=project_card *ngFor="let link of projects" [ngClass]=checkStyle(link) >
         <mat-card-header>
             <img mat-card-avatar class=project_avatar [src]=link.avatarLink [alt]=link.altAvatar>
             <mat-card-title>{{link.title}}</mat-card-title>
             <mat-card-subtitle>{{link.subtitle}}</mat-card-subtitle>
+            <mat-card-subtitle>{{link.category}}</mat-card-subtitle>
+
         </mat-card-header>
         <mat-card-content>
             {{link.description}}

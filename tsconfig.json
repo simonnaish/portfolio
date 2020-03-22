@@ -21,3 +21,6 @@
     "strictInjectionParameters": true
   }
 }
+
+// for autocomplete???
+// "noStrictGenericChecks": true,
