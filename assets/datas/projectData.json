@@ -18,7 +18,7 @@
             "title": "Portfolio.",
             "subtitle": "Angular, HTML, CSS, TS",
             "description": "Website contains short information about me, my projects, CV and contact details.",
-            "hostLink": null,
+            "hostLink": "https://simonnaish.github.io/portfolio/",
             "githubLink": "https://github.com/simonnaish/portfolio"
         },
         {
@@ -28,9 +28,20 @@
             "altAvatar": "Rene Egli logo",
             "title": "Improved application for windsurfing center.",
             "subtitle": "Angular, Django, DRF, Python, HTML, CSS, TS",
-            "description": "Web application taking care about organising material in company. Handling all operations only by serial number of equipment.",
+            "description": "Web application taking care of material in company. Handling all operations only by serial number of equipment.",
+            "hostLink": "https://simonnaish.github.io/SurfMaterialManagment/",
+            "githubLink": "https://github.com/simonnaish/SurfMaterialManagment"
+        },
+        {
+            "id": 3,
+            "category": "full-stack",
+            "avatarLink": "./assets/img/calculator.png",
+            "altAvatar": "Calc",
+            "title": "Salary tracker.",
+            "subtitle": "Angular, Django, DRF, Python, HTML, CSS, TS",
+            "description": "Web application taking care of material in company. Handling all operations only by serial number of equipment.",
             "hostLink": null,
-            "githubLink": null
+            "githubLink": "https://github.com/simonnaish/SalaryCalc"
         }
     ]
     
